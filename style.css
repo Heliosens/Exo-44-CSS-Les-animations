@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+body {
+    width: 100%;
+}
+
+#anim {
+    padding-top: 20rem;
+}
+
+p {
+    width: 20rem;
+    padding: 2rem;
+    background-color: blue;
+    animation-name: ghost;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ghost {
+
+    0% {
+        font-size: 1rem;
+        background-color: blue;
+    }
+
+    25% {
+        background-color: blue;
+    }
+
+    75% {
+        transform: rotate(0) scale(1);
+    }
+
+    100% {
+        width: 125rem;
+        background-color: red;
+        font-size: 10rem;
+        transform : rotate(-35deg) scale(2);
+    }
+}
+
+#yoyo {
+    width: 5rem;
+    height: 5rem;
+    background-color: black;
+    animation-name: vroum;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes vroum {
+
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(100vw);
+    }
+}
